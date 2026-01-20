@@ -1,3 +1,9 @@
+// This tells the app to use Render's port (usually 10000) or 3000 if local
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, "0.0.0.0", () => {
+    console.log(`✅ Server is live on port ${PORT}`);
+});
 const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
@@ -58,5 +64,6 @@ app.use(cors({
 app.get('/', (req, res) => {
     res.send('W-Stream Server is Live and Running! 🚀');
 });
+
 
 
