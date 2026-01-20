@@ -1,5 +1,5 @@
 // This tells the app to use Render's port (usually 10000) or 3000 if local
-const PORT = process.env.PORT || 3000;
+
 
 app.listen(PORT, "0.0.0.0", () => {
     console.log(`✅ Server is live on port ${PORT}`);
@@ -50,6 +50,7 @@ app.post('/send-otp', async (req, res) => {
 
 app.listen(3000, () => console.log('✅ Server running on http://localhost:3000'));
 // Use the port Render gives us, or 3000 if running locally
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
     console.log(`✅ Server is running on port ${PORT}`);
@@ -63,6 +64,7 @@ app.use(cors({
 app.get('/', (req, res) => {
     res.send('W-Stream Server is Live and Running! 🚀');
 });
+
 
 
 
