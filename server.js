@@ -1,3 +1,5 @@
+const cors = require('cors');
+app.use(cors()); // This allows YOUR website to talk to THIS server
 const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
@@ -58,3 +60,4 @@ app.use(cors({
 app.get('/', (req, res) => {
     res.send('W-Stream Server is Live and Running! 🚀');
 });
+
