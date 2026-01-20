@@ -53,4 +53,8 @@ app.use(cors({
     origin: '*', // This allows your Netlify site to talk to your Render server
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type']
+
 }));
+app.get('/', (req, res) => {
+    res.send('W-Stream Server is Live and Running! 🚀');
+});
